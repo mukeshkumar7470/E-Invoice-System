@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter User Name" />
+
+        <EditText
+            android:id="@+id/edtUserMobileNumbere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter User Mobile Number"
+            android:inputType="number"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+           />
+        <EditText
+            android:id="@+id/edtStockQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Stock Quantity"
+            android:inputType="number"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnInvoiceHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invoice History"
+           />
+
+    </LinearLayout>
+
+
+</layout>
