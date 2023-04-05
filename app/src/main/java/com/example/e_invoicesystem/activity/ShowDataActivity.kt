@@ -43,9 +43,14 @@ class ShowDataActivity : AppCompatActivity(), ItemClickInterface {
 
     override fun click(id: Int, dataModel: DataModel?) {
         mainActivityViewModel.deleteData(id)
+        onResume()
+        Toast.makeText(this, "Delete Data", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onResume() {
+        super.onResume()
         itemList.clear()
         itemList.addAll(mainActivityViewModel.getData()!!)
         adpter.setItemlist(itemList)
-        Toast.makeText(this, "Delete Data", Toast.LENGTH_SHORT).show()
     }
 }
