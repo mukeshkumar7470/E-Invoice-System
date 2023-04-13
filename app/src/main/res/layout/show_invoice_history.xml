@@ -19,7 +19,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="7">
+                android:weightSum="7"
+                android:background="#E5E4E2">
 
                 <TextView
                     android:id="@+id/tvItemId"
@@ -28,7 +29,9 @@
                     android:layout_margin="1dp"
                     android:layout_weight="0.3"
                     android:gravity="center"
-                    android:text="Id" />
+                    android:text="Id"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
 
                 <TextView
@@ -38,7 +41,9 @@
                     android:layout_margin="1dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="Name" />
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
 
 
@@ -47,9 +52,11 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:layout_weight="1.1"
+                    android:layout_weight="1.2"
                     android:gravity="center"
-                    android:text="Mobile" />
+                    android:text="Mobile No."
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvItemName"
@@ -58,7 +65,9 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="Item Name." />
+                    android:text="Item Name."
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvItemPrice"
@@ -67,7 +76,9 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="Item Price" />
+                    android:text="Invoice Value"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvItemQty"
@@ -76,7 +87,9 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="Item Qty" />
+                    android:text="Item Qty"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/tvInvoicePdf"
@@ -85,7 +98,9 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="Invoice Pdf" />
+                    android:text="Invoice Pdf"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

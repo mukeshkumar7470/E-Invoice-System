@@ -12,7 +12,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="7">
+            android:weightSum="7"
+            android:background="#BCC6CC">
 
             <TextView
                 android:layout_width="0dp"
@@ -22,7 +23,8 @@
                 android:gravity="center"
                 android:text="Id"
                 android:textColor="@color/black"
-                android:textSize="13sp"/>
+                android:textSize="13sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -30,9 +32,10 @@
                 android:layout_margin="1dp"
                 android:layout_weight="1.1"
                 android:gravity="center"
-                android:text="User Name"
+                android:text="Name"
                 android:textColor="@color/black"
-                android:textSize="13sp"/>
+                android:textSize="13sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -40,9 +43,10 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1.1"
                 android:gravity="center"
-                android:text="Mobile No."
+                android:text="Con. No."
                 android:textColor="@color/black"
-                android:textSize="13sp"/>
+                android:textSize="13sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -50,9 +54,10 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1.1"
                 android:gravity="center"
-                android:text="Item Name"
+                android:text="Item"
                 android:textColor="@color/black"
-                android:textSize="13sp"/>
+                android:textSize="13sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -60,9 +65,10 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1.1"
                 android:gravity="center"
-                android:text="Item Price"
+                android:text="MRP"
                 android:textColor="@color/black"
-                android:textSize="13sp"/>
+                android:textSize="13sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -70,9 +76,10 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1.1"
                 android:gravity="center"
-                android:text="Item Stock"
+                android:text="Item Qty"
                 android:textColor="@color/black"
-                android:textSize="13sp"/>
+                android:textSize="13sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -80,9 +87,10 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1.1"
                 android:gravity="center"
-                android:text="Print Invoice"
+                android:text="Invoice"
                 android:textColor="@color/black"
-                android:textSize="13sp"/>
+                android:textSize="13sp"
+                android:textStyle="bold"/>
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView

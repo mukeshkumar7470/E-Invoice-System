@@ -13,11 +13,24 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:text="All Invoice"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:background="#BCC6CC"
+                android:textStyle="bold"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="7">
+                android:weightSum="7"
+                android:background="#BCC6CC">
 
                 <TextView
                     android:layout_width="0dp"
@@ -27,7 +40,8 @@
                     android:gravity="center"
                     android:text="Id"
                     android:textColor="@color/black"
-                    android:textSize="13sp"/>
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -35,9 +49,10 @@
                     android:layout_margin="1dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="User Name"
+                    android:text="Name"
                     android:textColor="@color/black"
-                    android:textSize="13sp"/>
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -45,9 +60,10 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="Mobile No."
+                    android:text="Con. No."
                     android:textColor="@color/black"
-                    android:textSize="13sp"/>
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -55,9 +71,10 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="Item Name"
+                    android:text="Item"
                     android:textColor="@color/black"
-                    android:textSize="13sp"/>
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -65,9 +82,10 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="Item Price"
+                    android:text="MRP"
                     android:textColor="@color/black"
-                    android:textSize="13sp"/>
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -75,9 +93,10 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="Item Quantity"
+                    android:text="Qty"
                     android:textColor="@color/black"
-                    android:textSize="13sp"/>
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -85,9 +104,10 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="Print Invoice"
+                    android:text="Invoice"
                     android:textColor="@color/black"
-                    android:textSize="13sp"/>
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -137,6 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:text="Add Item"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/add_alarm_fab"
             app:layout_constraintEnd_toStartOf="@+id/add_alarm_fab"
             app:layout_constraintTop_toTopOf="@+id/add_alarm_fab" />
@@ -164,6 +185,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:text="New Invoice"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/add_person_fab"
             app:layout_constraintEnd_toStartOf="@+id/add_person_fab"
             app:layout_constraintTop_toTopOf="@+id/add_person_fab" />
@@ -191,6 +213,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:text="Show Stock"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/show_item_fab"
             app:layout_constraintEnd_toStartOf="@+id/show_item_fab"
             app:layout_constraintTop_toTopOf="@+id/show_item_fab" />

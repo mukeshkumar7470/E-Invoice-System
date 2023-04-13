@@ -50,7 +50,7 @@ class InvoicePdfActivity : AppCompatActivity() {
             mBinding.tvItemName.text = itemName
             mBinding.tvName.text = name
             mBinding.tvMobileNumber.text = mobileNumber
-            mBinding.tvItemQty.text = itemQty
+            mBinding.tvItemStock.text = itemQty
             mBinding.tvItemPrice.text = itemPrice
         }
 

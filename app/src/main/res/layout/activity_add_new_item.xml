@@ -9,30 +9,50 @@
         android:orientation="vertical"
         tools:context=".activity.AddNewItemActivity">
 
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:text="Add New Items"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:background="#BCC6CC"
+            android:textStyle="bold"/>
+
         <EditText
             android:id="@+id/edtItemName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Item name" />
+            android:hint="Enter Item name"
+            android:fontFamily="serif"/>
 
         <EditText
             android:id="@+id/edtItemPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Item Price"
-            android:inputType="number" />
+            android:inputType="number"
+            android:fontFamily="serif"/>
 
         <EditText
             android:id="@+id/edtItemStock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Item Stock"
-            android:inputType="number" />
+            android:inputType="number"
+            android:fontFamily="serif"/>
 
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save" />
+            android:text="Save"
+            android:layout_marginRight="65dp"
+            android:layout_marginLeft="65dp"
+            android:fontFamily="sans-serif-black"/>
+
+
     </LinearLayout>
 </layout>
