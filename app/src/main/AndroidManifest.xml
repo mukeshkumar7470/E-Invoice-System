@@ -35,13 +35,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".InvoicePdfActivity"
+            android:name=".activity.InvoicePdfActivity"
             android:exported="false" />
         <activity
-            android:name=".InvoiceHistoryActivity"
+            android:name=".activity.InvoiceHistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".InvoiceActivity"
+            android:name=".activity.InvoiceActivity"
             android:exported="false" />
         <activity
             android:name=".activity.UpdateActivity"
@@ -53,6 +53,16 @@
             android:name=".activity.MainActivity"
             android:exported="false">
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/path" />
+        </provider>
     </application>
 
 </manifest>

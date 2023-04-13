@@ -1,4 +1,4 @@
-package com.example.e_invoicesystem
+package com.example.e_invoicesystem.activity
 
 import android.app.Application
 import android.content.Intent
@@ -9,8 +9,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import com.example.e_invoicesystem.activity.MainActivityViewModel
-import com.example.e_invoicesystem.activity.ShowDataActivity
+import com.example.e_invoicesystem.R
 import com.example.e_invoicesystem.appRepository.MainActivityViewModelFactory
 import com.example.e_invoicesystem.databinding.ActivityInvoiceBinding
 import com.example.firebaseproject.appRepository.AppRepository
@@ -30,6 +29,7 @@ class InvoiceActivity : AppCompatActivity() {
     var itemPrice: String = ""
     var itemName: String = ""
     var itemStockQty: String = ""
+    var itemMrp: String = ""
     var id: Int = 0
     var itemNameList = ArrayList<String>()
     lateinit var dataList: List<DataModel?>
@@ -96,6 +96,7 @@ class InvoiceActivity : AppCompatActivity() {
                                     if (itemNameList[position] == it!!.itemName) {
                                         itemPrice = it.itemPrice.toString()
                                         itemName = it.itemName.toString()
+                                        itemMrp = it.itemPrice.toString()
                                         currentItemStock=it.itemStock
                                         itemId=it.id
 
@@ -134,15 +135,14 @@ class InvoiceActivity : AppCompatActivity() {
 
                 } else {
                     if(currentItemStock!=0){
-                        var model = InvoiceDataModel(0, userName, UserMobileNumber, itemName, itemPrice,itemStockQty)
-                        mainActivityViewModel.insertInvoiceData(model)
                         var currentItemStocks= (currentItemStock)?.minus((Integer.parseInt(itemStockQty)))
                         if (currentItemStocks!! > 0){
-                            mainActivityViewModel.updateDataInInvoice(currentItemStocks ,itemId)
-
-                            startActivity(Intent(this@InvoiceActivity, InvoiceHistoryActivity::class.java))
+                            var model = InvoiceDataModel(0, userName, UserMobileNumber, itemName, itemPrice,itemStockQty, itemMrp)
+                            mainActivityViewModel.insertInvoiceData(model)
+                            mainActivityViewModel.updateData(DataModel(itemName = itemName, id = itemId, itemPrice = itemPrice.toInt(), itemStock = currentItemStocks))
                             Toast.makeText(this, "Item Added Successfully", Toast.LENGTH_SHORT).show()
-                            finish()
+                            startActivity(Intent(this@InvoiceActivity, MainActivity::class.java))
+                            finishAffinity()
                         }else{
                             Toast.makeText(this, "This Item is out of Stock", Toast.LENGTH_SHORT).show()
                         }

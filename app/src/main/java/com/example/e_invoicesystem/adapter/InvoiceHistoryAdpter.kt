@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.e_invoicesystem.InvoicePdfActivity
+import com.example.e_invoicesystem.activity.InvoicePdfActivity
 import com.example.e_invoicesystem.R
 import com.example.e_invoicesystem.databinding.ShowInvoiceHistoryBinding
 import com.example.firebaseproject.db.InvoiceDataModel
@@ -46,6 +46,12 @@ class InvoiceHistoryAdpter(
         }
         holder.mBinding.tvInvoicePdf.setOnClickListener {
             var intent = Intent(contaxt, InvoicePdfActivity::class.java)
+            intent.putExtra("name",model!!.userName)
+            intent.putExtra("mobileNumber",model!!.mobileNumber)
+            intent.putExtra("itemName",model!!.itemName)
+            intent.putExtra("itemPrice",model!!.itemPrice)
+            intent.putExtra("itemQty",model!!.itemQty)
+            intent.putExtra("itemMrp",model!!.itemMrp)
             contaxt.startActivity(intent)
         }
 

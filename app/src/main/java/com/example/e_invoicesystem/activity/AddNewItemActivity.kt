@@ -45,12 +45,8 @@ class AddNewItemActivity : AppCompatActivity() {
                 var model= DataModel(0,itemName,itemPrice,itemStok)
                 mainActivityViewModel.insertData(model)
                 Toast.makeText(this, "Data Save", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@AddNewItemActivity, ShowDataActivity::class.java))
             }
-
-        }
-
-        mBinding.btnShow.setOnClickListener{
-            startActivity(Intent(this@AddNewItemActivity, ShowDataActivity::class.java))
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.e_invoicesystem
+package com.example.e_invoicesystem.activity
 
 import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import com.example.e_invoicesystem.activity.MainActivityViewModel
-import com.example.e_invoicesystem.activity.ShowDataActivity
+import com.example.e_invoicesystem.R
 import com.example.e_invoicesystem.adapter.InvoiceHistoryAdpter
 import com.example.e_invoicesystem.appRepository.MainActivityViewModelFactory
 import com.example.e_invoicesystem.databinding.ActivityInvoiceHistoryBinding
@@ -21,7 +20,7 @@ class InvoiceHistoryActivity : AppCompatActivity() {
     var  histroyList = ArrayList<InvoiceDataModel?>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding=DataBindingUtil.setContentView(this,R.layout.activity_invoice_history)
+        mBinding=DataBindingUtil.setContentView(this, R.layout.activity_invoice_history)
         var appRepository = AppRepository(applicationContext)
        mainActivityViewModel = ViewModelProvider(this, MainActivityViewModelFactory(
             applicationContext as Application,appRepository)
@@ -34,7 +33,6 @@ class InvoiceHistoryActivity : AppCompatActivity() {
         adpter = InvoiceHistoryAdpter(this, histroyList)
         mBinding.rvList.setHasFixedSize(true)
         mBinding.rvList.adapter= adpter
-
 
     }
 }

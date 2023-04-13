@@ -3,13 +3,11 @@ package com.example.e_invoicesystem.activity
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import com.example.e_invoicesystem.InvoiceActivity
 import com.example.e_invoicesystem.R
 import com.example.e_invoicesystem.adapter.InvoiceHistoryAdpter
 import com.example.e_invoicesystem.appRepository.MainActivityViewModelFactory
@@ -109,9 +107,6 @@ class MainActivity : AppCompatActivity() {
     private fun callToSetData() {
         histroyList.clear()
         histroyList.addAll(mainActivityViewModel.getInvoiceData()!!)
-
-        Log.e("TAG", "fgdsfgs$histroyList: " )
-
         adpter = InvoiceHistoryAdpter(this, histroyList)
         mBinding.rvList.setHasFixedSize(true)
         mBinding.rvList.adapter= adpter

@@ -75,7 +75,7 @@
                     android:layout_margin="2dp"
                     android:layout_weight="1.1"
                     android:gravity="center"
-                    android:text="Item Stock"
+                    android:text="Item Quantity"
                     android:textColor="@color/black"
                     android:textSize="13sp"/>
 

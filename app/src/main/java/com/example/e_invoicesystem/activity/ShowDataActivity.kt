@@ -1,6 +1,7 @@
 package com.example.e_invoicesystem.activity
 
 import android.app.Application
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -52,5 +53,11 @@ class ShowDataActivity : AppCompatActivity(), ItemClickInterface {
         itemList.clear()
         itemList.addAll(mainActivityViewModel.getData()!!)
         adpter.setItemlist(itemList)
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this@ShowDataActivity, MainActivity::class.java))
+        finishAffinity()
     }
 }

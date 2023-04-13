@@ -26,13 +26,16 @@ class InvoiceDataModel : Serializable {
     @SerializedName("ItemQty")
     var itemQty: String ?= ""
 
+    var itemMrp: String ?= ""
+
     constructor(
         id: Int,
         userName: String?,
         mobileNumber: String?,
         itemName: String?,
         itemPrice: String?,
-        itemQty:String?
+        itemQty:String?,
+        itemMrp:String?
     ) {
         this.id = id
         this.userName = userName
@@ -40,6 +43,7 @@ class InvoiceDataModel : Serializable {
         this.itemName = itemName
         this.itemPrice = itemPrice
         this.itemQty=itemQty
+        this.itemMrp=itemMrp
     }
 
     override fun toString(): String {
