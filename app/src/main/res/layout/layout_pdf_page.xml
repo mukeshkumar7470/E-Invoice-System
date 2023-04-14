@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    app:layout_constraintBaseline_toBottomOf="@color/black">
 
     <TextView
         android:id="@+id/txt_title"
@@ -14,12 +15,14 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="sans-serif"
-        android:text="E- Invoice"
+        android:text="E- Invoice System"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"
+        android:background="#EAEDED"/>
 
     <TextView
         android:id="@+id/txt_student_name_label"
@@ -29,7 +32,8 @@
         android:text="Name:"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_title" />
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/txt_student_name"
@@ -37,7 +41,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         app:layout_constraintStart_toEndOf="@id/txt_student_name_label"
-        app:layout_constraintTop_toBottomOf="@id/txt_title" />
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/txt_student_mobile_label"
@@ -47,7 +52,8 @@
         android:text="Mobile:"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_student_name_label" />
+        app:layout_constraintTop_toBottomOf="@id/txt_student_name_label"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/txt_student_mobile"
@@ -55,7 +61,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         app:layout_constraintStart_toEndOf="@id/txt_student_mobile_label"
-        app:layout_constraintTop_toBottomOf="@id/txt_student_name_label" />
+        app:layout_constraintTop_toBottomOf="@id/txt_student_name_label"
+        android:textColor="@color/black"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/marks_label_layout"
@@ -67,7 +74,8 @@
         android:background="@drawable/border_less_padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_student_mobile_label">
+        app:layout_constraintTop_toBottomOf="@id/txt_student_mobile_label"
+        android:backgroundTint="#F4F6F6">
 
         <TextView
             android:id="@+id/txt_item_name"
@@ -78,7 +86,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/txt_item_mrp"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/txt_item_mrp"
@@ -90,7 +99,8 @@
             app:layout_constraintEnd_toStartOf="@+id/txt_item_price"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/txt_item_name"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/txt_item_price"
@@ -101,7 +111,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/txt_item_qty"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/txt_item_mrp" />
+            app:layout_constraintStart_toEndOf="@+id/txt_item_mrp"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/txt_item_qty"
@@ -112,7 +123,8 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/txt_item_price" />
+            app:layout_constraintStart_toEndOf="@+id/txt_item_price"
+            android:textColor="@color/black"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -126,7 +138,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/marks_label_layout"
-        tools:listitem="@layout/recycler_marks" />
+        tools:listitem="@layout/recycler_marks"
+        android:background="#F4F6F6"/>
 
     <TextView
         android:id="@+id/total_marks_label"
@@ -138,14 +151,18 @@
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pdf_marks" />
+        app:layout_constraintTop_toBottomOf="@id/pdf_marks"
+        android:textColor="@color/black"
+        android:background="#F2F4F4"/>
 
     <TextView
         android:id="@+id/txt_total_marks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold|italic"
+        android:layout_width="54dp"
+        android:layout_height="21dp"
         android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/total_marks_label"
         app:layout_constraintTop_toBottomOf="@id/pdf_marks" />
 

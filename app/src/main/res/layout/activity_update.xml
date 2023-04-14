@@ -36,7 +36,8 @@
             android:layout_gravity="center"
             android:text="Post"
             android:fontFamily="sans-serif-black"
-            android:inputType="number" />
+            android:inputType="number"
+            android:backgroundTint="#1F618D"/>
 
     </LinearLayout>
 </layout>

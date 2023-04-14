@@ -58,7 +58,7 @@ class InvoicePdfActivity : AppCompatActivity() {
                 val invoiceDetailsList = listOf(
                     InvoiceDetails(itemName!!, itemPrice!!.toDouble(), itemMrp!!, itemQty!!)
                 )
-                var totalMarks = 0.0
+                var totalMarks =0.0
                 invoiceDetailsList.forEach {
                     totalMarks += it.itemPrice
                 }

@@ -51,7 +51,8 @@
             android:text="Save"
             android:layout_marginRight="65dp"
             android:layout_marginLeft="65dp"
-            android:fontFamily="sans-serif-black"/>
+            android:fontFamily="sans-serif-black"
+            android:backgroundTint="#1F618D"/>
 
 
     </LinearLayout>
