@@ -60,7 +60,7 @@ class InvoicePdfActivity : AppCompatActivity() {
                 )
                 var totalMarks =0.0
                 invoiceDetailsList.forEach {
-                    totalMarks += it.itemPrice
+                    totalMarks = it.itemPrice * it.itemQty.toDouble()
                 }
                 val pdfDetails = PdfDetails(name!!,mobileNumber!!, totalMarks!!, invoiceDetailsList)
                 val pdfConverter = PDFConverter()
